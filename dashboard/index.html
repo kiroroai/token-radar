@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div>
+      <h1>TOKEN RADAR</h1>
+      <p class="tag">Pre-token protocols, ranked by what their token would be worth — and how to farm each one before it exists.</p>
+    </div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+
+<section class="method" id="method"></section>
+
+<nav class="controls" id="controls">
+  <input id="q" type="search" placeholder="Search name, category, chain…" aria-label="Search protocols">
+  <select id="cat" aria-label="Filter by category"><option value="">All categories</option></select>
+  <select id="chain" aria-label="Filter by chain"><option value="">All chains</option></select>
+  <div class="chips" role="group" aria-label="Tier filter">
+    <button data-tier="" class="chip on">All rows</button>
+    <button data-tier="watchlist" class="chip">Watchlist</button>
+    <button data-tier="early" class="chip">Early finds</button>
+    <button data-tier="live" class="chip">Already launched</button>
+  </div>
+  <select id="sort" aria-label="Sort the board">
+    <option value="implied">Sort: implied value</option>
+    <option value="tvl">Sort: TVL</option>
+    <option value="growth">Sort: 7d growth</option>
+    <option value="age">Sort: tokenless age</option>
+    <option value="multiple">Sort: category multiple</option>
+  </select>
+</nav>
+
+<main>
+  <p class="count" id="count"></p>
+  <table class="board" id="board">
+    <thead><tr>
+      <th class="r">#</th><th>Protocol</th><th>Chains</th><th class="r">TVL</th><th class="r">7d</th>
+      <th class="r">Tokenless</th><th class="r">Multiple</th><th class="r">Implied value</th><th></th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <section class="live" id="live" hidden>
+    <h2>Already launched — the market's own values, kept off the board</h2>
+    <p class="note">These protocols record a token in the snapshot, so the radar does not rank them: it shows what the market already says, as the yardstick the board's multiples are read from.</p>
+    <table class="board">
+      <thead><tr><th>Protocol</th><th>Symbol</th><th>Chains</th><th class="r">TVL</th><th class="r">7d</th><th class="r">Market cap</th></tr></thead>
+      <tbody id="live-rows"></tbody>
+    </table>
+  </section>
+</main>
+
+<aside class="detail" id="detail" hidden></aside>
+<div class="scrim" id="scrim" hidden></div>
+
+<footer>
+  <p id="foot"></p>
+  <p>An implied value is this model's claim from the snapshot's own figures — TVL, one week of growth, and how long a protocol has run with no token recorded. It is not a prediction that a token will be issued, or when. Farm plans are checklists, not financial advice: a position can lose money, and a launch may never come.</p>
+</footer>
+
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
