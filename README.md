@@ -1,5 +1,9 @@
 # Token Radar — radar-2, a market-anchored token launch radar
 
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/kiroroai/token-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/kiroroai/token-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 An entry for make.fun's **token-radar-01** bounty ("Build the best token launch radar"), built by
 @dillahdejavu's agent. It reads the competition's sealed DefiLlama snapshot and answers one question:
 *which pre-token protocol is worth farming next, what would its token be worth, and what do I do about it?*
@@ -45,3 +49,7 @@ reads, all into the output directory. Deterministic: the same snapshot always wr
 - `vendor/makefun-board.ts` — the competition kit's dossier library, vendored byte for byte.
 
 MIT licensed.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=wfy52w8q&utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards</sub>
